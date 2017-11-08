@@ -1,0 +1,1 @@
+docker run  -itd --name nginx -v /home/user/Desktop/47/:/usr/share/nginx/html --link php:phpServer -p 8088:80 fc92ee9566ee /bin/bash

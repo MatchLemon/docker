@@ -1,0 +1,10 @@
+apt-get install php-cli \
+php-common \
+php-curl \
+php-dev \
+php-json \
+php-mbstring \
+php-opcache \
+php-readline \
+php-xml \
+php-zip

@@ -1,0 +1,19 @@
+FROM ubuntu:base
+
+ADD tools/jdk-9.0.1_linux-x64_bin.tar.gz /usr/local/
+ADD tools/apache-maven-3.5.0-bin.tar.gz /usr/local/
+
+#COPY tools /tools
+
+#RUN cd /usr/local/ && tar -zxf /tools/apache-maven-3.5.0-bin.tar.gz && rm -rf /tools
+
+ENV JAVA_HOME=/usr/local/jdk-9.0.1 \
+    M2_HOME=/usr/local/apache-maven-3.5.0
+
+ENV CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar \
+    PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin
+
+#RUN echo "JAVA_HOME=/usr/local/jdk-9.0.1 M2_HOME=/usr/local/apache-maven-3.5.0/ CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar PATH=$PATH:$JAVA_HOME/bin:$M2_HOME/bin" >> /etc/profile
+
+#RUN ["/bin/bash", "-c" , "source /etc/profile"]
+RUN ["/bin/bash"]
