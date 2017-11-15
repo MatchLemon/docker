@@ -1,0 +1,4 @@
+FROM registry.cn-hangzhou.aliyuncs.com/heyman/debian:php
+COPY start.sh /
+RUN  chmod a+x /start.sh
+CMD /start.sh

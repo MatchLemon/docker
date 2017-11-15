@@ -1,0 +1,5 @@
+FROM registry.cn-hangzhou.aliyuncs.com/heyman/ubuntu:base-ssh
+#nginx config
+COPY nginx.conf /etc/nginx/conf.d/
+
+CMD ["nginx", "-g", "daemon off;"]
