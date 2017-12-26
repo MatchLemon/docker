@@ -1,0 +1,10 @@
+version: '3'
+services:
+  php7.1:
+    image: registry.cn-hangzhou.aliyuncs.com/heyman/ubuntu:php7.1
+    volumes:
+      - /home/yt00566/Desktop/test/:/srv
+    container_name: ubuntu-php7.1
+    working_dir: /srv
+    stdin_open: true
+    tty: true

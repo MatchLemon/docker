@@ -1,0 +1,8 @@
+version: '2'
+services:
+  mongodb:
+    image: ubuntu:latest
+    container_name: ubuntu-mongodb
+    working_dir: /srv
+    stdin_open: true
+    tty: true
